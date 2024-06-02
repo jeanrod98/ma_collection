@@ -37,7 +37,7 @@ const Leters = () => {
         {!mostrarCarta ? (
           <>
             <p>
-              Por motivos de seguridad, debemos reviar que seas la persona
+              Por motivos de seguridad, debemos revisar que seas la persona
               correcta para continuar &#128522;
             </p>
 
