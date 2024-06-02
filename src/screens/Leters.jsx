@@ -9,7 +9,7 @@ import tulipan from "../assets/tulipanes.jpg"
 
 const Leters = () => {
   const [nombre, setNombre] = useState("");
-  const [mostrarCarta, setMostrarCarta] = useState(true);
+  const [mostrarCarta, setMostrarCarta] = useState(false);
 
   const comprobarIdentidad = () => {
     if (
@@ -33,7 +33,7 @@ const Leters = () => {
 
   return (
     <>
-      <ComponenteCartas>
+      <ComponenteCartas tulipan={tulipan}>
         {!mostrarCarta ? (
           <>
             <p>
@@ -91,7 +91,7 @@ const ComponenteCartas = styled.div`
   background: #f9f9f9;
 //   background: red;
 
-background-image: url(${tulipan});
+background-image: url(${props => tulipan});
 // background-size: contain;
 background-repeat: no-repeat;
 
