@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import Swal from "sweetalert2";
 import VerCarta from "../Components/VerCarta";
@@ -10,6 +10,16 @@ import tulipan from "../assets/tulipanes.jpg"
 const Leters = () => {
   const [nombre, setNombre] = useState("");
   const [mostrarCarta, setMostrarCarta] = useState(false);
+
+  useEffect(() => {
+    Swal.fire({
+      position: "center",
+      icon: "info",
+      title: "Tienes una nueva carta",
+      showConfirmButton: true,
+      confirmButtonText: "Abrir carta"
+    });
+  }, [])
 
   const comprobarIdentidad = () => {
     if (

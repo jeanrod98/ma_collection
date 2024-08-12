@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import carta from "../assets/carta.jpg";
+import carta2 from "../assets/carta2.jpg";
 import { IoIosCloseCircle } from "react-icons/io";
 import { useState } from "react";
 
@@ -19,14 +20,24 @@ const VerCarta = ({ setMostrarCarta }) => {
         />
         
         {ver ? (
-          <img src={carta} alt="" />
+          <img src={carta2} alt="" />
         ) : (
-          <div className="card">
-            <img src={icono} alt="" />
-            <button onClick={() => setVer(true)}>Abrir Carta</button>
-          </div>
+          <>
+            {/* <div className="card">
+              <img src={icono} alt="" />
+              <button onClick={() => setVer(true)}>Abrir Carta</button>
+            </div> */}
+
+            <div className="card">
+              <img src={icono} alt="" />
+              <button onClick={() => setVer(true)}>Abrir Carta</button>
+            </div>
+          </>
+          
         )}
       </Carta>
+
+      
     </>
   );
 };
